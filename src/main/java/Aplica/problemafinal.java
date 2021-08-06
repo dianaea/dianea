@@ -1,3 +1,4 @@
+//caso desarrollado para los comerciantes y campo laboral
 package Aplica;
 import java.awt.Dimension;
 public class Problema01 extends javax.swing.JFrame {
@@ -10,11 +11,12 @@ public class Problema01 extends javax.swing.JFrame {
         init Components();
         formulario();
     }
-
+// este es metodo del formulario
     private void formulario (){
         this.setLocalRelativeTp(this);
         this.setResizable(false);
-        this,setSize(new Dimension(335, 440));   
+        this,setSize(new Dimension(335, 440));
+    //en este formulario le di un tamaño y forma
     }
      public void mayorMenor(String indicemayor) {
          int indiceMayor,indiceMenor;
@@ -26,6 +28,8 @@ public class Problema01 extends javax.swing.JFrame {
          imprime ("Menor valor = " + A (indiceMenor) + " corresponde al indice : " + indiceMenor);
          
      }
+     //Inserte para sacar el mayor menor para calcular lo descendente;este es el metodo  indice menor
+     //return int mayor
      public int indiceDelMayor(){
          int mayor = 0 , indMayor = 0;
          
@@ -37,6 +41,9 @@ public class Problema01 extends javax.swing.JFrame {
         }
         return indMayor;
     }
+    
+   //Inserte para calcular el mayor numero acendente;este metodo es para el indice mayor
+     //return int menor
      
      public int indiceDelMenor(){
          int menor = Vmax, indMenor = 0;
@@ -50,10 +57,14 @@ public class Problema01 extends javax.swing.JFrame {
         return indMenor;
     }
      
+     // Este es el metodo para mostrar el menor para relizar lo menor de un producto
+     
      public void mostrarArreglo(){
         for (int indice = 0; indice < NumElem; indice++) (imprime("(" + (indice) + " ) = + A(indice));
                 
     }
+     
+     //Este es el metodo de arreglo para mostrar todo LO CALCULADO
     
     public void generar(){
         for (int indice = 0; indice < NumElem; indice++) (A(indice) = (int) (numeroAleatorio());
@@ -62,6 +73,8 @@ public class Problema01 extends javax.swing.JFrame {
         limpiarSalida();
         imprime("/nSon " + "NumElem aletorios generados ");
         imprime(" y almacenados en el arreglo") ;
+        
+        
 
     private void setLocalRelativeTp(Problema01 aThis) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -85,6 +98,7 @@ public class Problema01 extends javax.swing.JFrame {
         
     }
      
+        // este metodo es para que los numeros se den de manera acendente ejemplo  1,2,3,4 ,....
     public double numeroAleatorio(){
         double NumAlea;
         NumAlea = (Math.randoom() * Vmax);
@@ -92,35 +106,40 @@ public class Problema01 extends javax.swing.JFrame {
         
     }
     
+        // este es e metodo limpiar sirve para poder calcular otro producto
     public void LimpiarSalida(){
         textSalida.setText("");
         
     }
-    
+    // este es el metodo para que puedas saber cuanto es lo que calculaste 
     public void imprime(String cadena){
         textSalida.append(cadena + "/n");
     }    
      
+        // este metodo de aceptar para ver lo que genero 
     public void btnAceptarActionPerFormed(){
         generar();
     }    
     
+         // este metodo de nuevo para poder calcular otros  
     public void btnNuevoActionPerformed(){
         LimpiarSalida();
     }    
     
+        // este es el metodo para salir del programa o dejar de ejecutar
     public void btnSalirActionPerFormed(){
         System.exit(0);
     }    
-    
+    // este metodo es para mostrar lo calculado 
      public void btnMostrarActionPerFormed(){
         mostrarArreglo();
     } 
-        
+        //este es el metodo para sacar el manor del menor
      public void btnMaMeActionPerFormed(){
         mayorMenor();
     } 
 }    
+        //este es el final del programa..
         
   
         
